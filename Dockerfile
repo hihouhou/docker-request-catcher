@@ -15,14 +15,7 @@ ENV PATH $GOPATH/bin:$GOROOT/bin:$PATH
 
 # Update & install packages for request-catcher
 RUN apt-get update && \
-    apt-get install -y wget curl git
-
-#Add node repository
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
-
-# Update & install packages for npm
-RUN apt-get update && \
-    apt-get install -y npm
+    apt-get install -y wget curl git npm
 
 # Get go
 RUN wget https://storage.googleapis.com/golang/go1.10.linux-amd64.tar.gz && \
